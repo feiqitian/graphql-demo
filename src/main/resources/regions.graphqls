@@ -1,0 +1,11 @@
+extend type Query {
+    # 省市区信息
+    regions:[Region!]!
+}
+
+type Region {
+    code: String
+    name: String
+    description(prefix:String!): String
+    children: [Region!]!
+}
